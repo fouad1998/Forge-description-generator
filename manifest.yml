@@ -1,0 +1,25 @@
+modules:
+  jira:issuePanel:
+    - key: generate-description-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Ticket description generator
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.tsx
+app:
+  id: ari:cloud:ecosystem::app/6bf118ca-3cd7-41be-9599-a6758a9b708f
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+  external:
+    fetch:
+      backend:
+        - 'https://api.openai.com/v1/chat/completions'
