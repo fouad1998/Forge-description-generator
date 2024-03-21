@@ -77,6 +77,7 @@ const App = () => {
       <Box padding="space.100">
         <Text>Generate a description for your ticket by your title</Text>
       </Box>
+
       <LoadingButton isLoading={isLoading} onClick={onClick}>
         Generate
       </LoadingButton>

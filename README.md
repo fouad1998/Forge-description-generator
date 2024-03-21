@@ -1,8 +1,10 @@
-# Forge Hello World
+# Forge Description generator
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel. 
+This project contains a Forge app written in Typescript that `generate Jira issue description` based on issue `title` in a Jira issue panel. 
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+You will need to get a token from `https://platform.openai.com/api-keys`, if you want to make interactif, otherwise it will always send you static description which is hard coded.
+
+You have to set your key in `src/resolvers/index.ts`.
 
 ## Requirements
 
